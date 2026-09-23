@@ -1,0 +1,386 @@
+/* Container Layout */
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding: 90px 8%;
+  position: relative;
+}
+
+/* Header Badge & Title */
+.about-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.about-badge {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #da7c25;
+  text-transform: uppercase;
+  background: rgba(218, 124, 37, 0.1);
+  padding: 6px 16px;
+  border-radius: 50px;
+  border: 1px solid rgba(218, 124, 37, 0.3);
+}
+
+.about-title {
+  font-size: 48px;
+  font-weight: 800;
+  position: relative;
+  background: linear-gradient(180deg, #ffffff 0%, #a1a1a1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 4px;
+  background: var(--glow-gradient);
+  border-radius: 4px;
+}
+
+/* Main Grid Layout */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  width: 100%;
+}
+
+/* Bio Card Glassmorphism */
+.about-bio-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: var(--transition);
+}
+
+.about-bio-card:hover {
+  border-color: rgba(185, 35, 225, 0.4);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.bio-lead {
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.bio-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-muted);
+  font-family: var(--font-body);
+}
+
+.bio-tags {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.bio-tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 10px 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-main);
+  transition: var(--transition);
+  width: 100%;
+}
+
+/* Bio Tags Customized Domain Colors */
+.tag-ml {
+  background: rgba(185, 28, 28, 0.12);
+  border-color: rgba(220, 38, 38, 0.4);
+  color: #f87171;
+}
+.tag-data {
+  background: rgba(6, 182, 212, 0.08);
+  border-color: rgba(6, 182, 212, 0.3);
+  color: #38bdf8;
+}
+.tag-robotics {
+  background: rgba(226, 232, 240, 0.1);
+  border-color: rgba(226, 232, 240, 0.35);
+  color: #e2e8f0;
+}
+.tag-web {
+  background: rgba(16, 185, 129, 0.08);
+  border-color: rgba(16, 185, 129, 0.3);
+  color: #34d399;
+}
+
+/* Skills Cards Box */
+.about-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+}
+
+.skill-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.skill-percent {
+  font-weight: 700;
+}
+
+.skill-bar {
+  width: 100%;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 50px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.skill-fill {
+  height: 100%;
+  border-radius: 50px;
+  transition: width 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Unique Domain Skill Colors & Glow Gradients */
+
+/* 1. Machine Learning & AI: Dark Metallic Charcoal & Crimson Dark Red */
+.skill-ml .skill-fill {
+  background: linear-gradient(90deg, #1e293b 0%, #7f1d1d 40%, #dc2626 75%, #ef4444 100%);
+  box-shadow: 0 0 16px rgba(220, 38, 38, 0.7);
+}
+.skill-ml .skill-percent {
+  color: #ef4444;
+}
+
+/* 2. Data Analytics & BI: React Cyan & Neon Magenta (Swapped) */
+.skill-data .skill-fill {
+  background: linear-gradient(90deg, #06b6d4 0%, #ec4899 50%, #8b5cf6 100%);
+  box-shadow: 0 0 14px rgba(6, 182, 212, 0.6);
+}
+.skill-data .skill-percent {
+  color: #38bdf8;
+}
+
+/* 3. Embedded Systems & Robotics: Chrome Metallic Silver Gradient */
+.skill-robotics .skill-fill {
+  background: linear-gradient(90deg, #f8fafc 0%, #cbd5e1 35%, #94a3b8 70%, #64748b 100%);
+  box-shadow: 0 0 14px rgba(226, 232, 240, 0.65);
+}
+.skill-robotics .skill-percent {
+  color: #e2e8f0;
+}
+
+/* 4. Full-Stack Web Dev (MERN): Emerald Mint & Deep Ocean Blue (Swapped) */
+.skill-web .skill-fill {
+  background: linear-gradient(90deg, #10b981 0%, #06b6d4 50%, #3b82f6 100%);
+  box-shadow: 0 0 14px rgba(16, 185, 129, 0.6);
+}
+.skill-web .skill-percent {
+  color: #10b981;
+}
+
+/* Stats Cards Grid */
+.about-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.stat-card-link {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 30px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.stat-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  border-color: rgba(218, 124, 37, 0.6);
+  box-shadow: 0 15px 35px rgba(218, 124, 37, 0.25);
+}
+
+.stat-card h2 {
+  font-size: 44px;
+  font-weight: 800;
+  background: var(--glow-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stat-card p {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Mobile & Tablet Responsiveness */
+@media (max-width: 1024px) {
+  .about {
+    padding: 70px 6%;
+  }
+
+  .about-title {
+    font-size: 42px;
+  }
+
+  /* 1. Skill progress bars (bagal wala content) moved below the card */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  /* 2. About Me card height reduced & compact padding */
+  .about-bio-card {
+    padding: 26px 28px;
+    gap: 14px;
+  }
+
+  .bio-lead {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .bio-text {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .bio-tags {
+    margin-top: 8px;
+    gap: 8px;
+  }
+
+  .bio-tag {
+    padding: 8px 6px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 60px 5%;
+    gap: 35px;
+  }
+
+  .about-title {
+    font-size: 34px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-bio-card {
+    padding: 30px 24px;
+  }
+
+  .about-stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  .stat-card {
+    padding: 20px 10px;
+  }
+
+  .stat-card h2 {
+    font-size: 32px;
+  }
+
+  .stat-card p {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 520px) {
+  .about-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .bio-lead {
+    font-size: 17px;
+  }
+
+  .about-title {
+    font-size: 28px;
+  }
+
+  .bio-tags {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px;
+  }
+
+  .bio-tag {
+    font-size: 11px;
+    padding: 8px 4px;
+  }
+}
+
+@media (max-width: 360px) {
+  .about {
+    padding: 45px 3%;
+  }
+
+  .about-bio-card {
+    padding: 22px 16px;
+  }
+
+  .bio-tag {
+    font-size: 10px;
+    padding: 7px 3px;
+  }
+}

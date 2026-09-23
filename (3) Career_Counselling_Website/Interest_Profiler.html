@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interest Profiler - Career Discovery Tool</title>
+    <link rel="stylesheet" href="Int_Pro.css">
+     <script src="Int_Pro.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="logo">
+                <h1>Interest Profiler</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h2 class="hero-title">Interest Profiler</h2>
+                <p class="hero-subtitle">Identify careers that align with your passions and interests.</p>
+                <button class="cta-button" onclick="startAssessment()">Start Assessment</button>
+            </div>
+            <div class="hero-image">
+                <div class="floating-card">
+                    <div class="card-icon">🎯</div>
+                    <h3>Career Match</h3>
+                    <p>Find your perfect career path based on your unique interests</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Assessment Section -->
+        <section class="assessment-section" id="assessment" style="display: none;">
+            <div class="assessment-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="question-counter">
+                    <span id="questionNumber">1</span> of <span id="totalQuestions">20</span>
+                </div>
+                
+                <div class="question-card">
+                    <h3 id="questionText">Loading question...</h3>
+                    <div class="options-container" id="optionsContainer">
+                        <!-- Options will be dynamically generated -->
+                    </div>
+                </div>
+                
+                <div class="navigation-buttons">
+                    <button class="nav-btn" id="prevBtn" onclick="previousQuestion()" disabled>Previous</button>
+                    <button class="nav-btn primary" id="nextBtn" onclick="nextQuestion()" disabled>Next</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section class="results-section" id="results" style="display: none;">
+            <div class="results-container">
+                <h2>Your Career Profile</h2>
+                <div class="profile-summary">
+                    <div class="profile-type">
+                        <h3 id="profileType">Analytical Thinker</h3>
+                        <p id="profileDescription">You enjoy solving complex problems and working with data.</p>
+                    </div>
+                </div>
+                
+                <div class="career-matches">
+                    <h3>Recommended Careers</h3>
+                    <div class="career-grid" id="careerGrid">
+                        <!-- Career cards will be dynamically generated -->
+                    </div>
+                </div>
+                
+                <div class="interest-breakdown">
+                    <h3>Interest Areas</h3>
+                    <div class="interest-bars" id="interestBars">
+                        <!-- Interest bars will be dynamically generated -->
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button class="action-btn" onclick="restartAssessment()">Retake Assessment</button>
+                    <button class="action-btn secondary" onclick="downloadResults()">Download Results</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <div class="about-content">
+                <h2>About Interest Profiler</h2>
+                <p>Our Interest Profiler is a comprehensive career assessment tool designed to help you discover careers that align with your natural interests and passions. Based on established career theory and research, our assessment evaluates your preferences across multiple interest areas to provide personalized career recommendations.</p>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Comprehensive Analysis</h3>
+                        <p>Get detailed insights into your interest patterns and career preferences</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Personalized Results</h3>
+                        <p>Receive tailored career recommendations based on your unique profile</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h3>Career Guidance</h3>
+                        <p>Explore detailed information about recommended career paths</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer" id="contact">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Interest Profiler</h3>
+                    <p>Helping you discover your ideal career path through comprehensive interest assessment.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Email: info@interestprofiler.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Interest Profiler. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

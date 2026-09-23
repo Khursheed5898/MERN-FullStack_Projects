@@ -1,0 +1,26 @@
+{
+  "name": "dibotai",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node scripts/dev-runner.cjs",
+    "client": "vite --host 127.0.0.1",
+    "server": "npm --prefix server run dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "install-all": "npm install && npm --prefix server install",
+    "postinstall": "npm install --prefix server",
+    "start": "node server/server.js"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^5.1.0",
+    "axios": "^1.13.1",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-markdown": "^10.1.0",
+    "react-router-dom": "^7.9.1",
+    "remark-gfm": "^4.0.1",
+    "socket.io-client": "^4.8.3",
+    "vite": "^7.1.3"
+  }
+}

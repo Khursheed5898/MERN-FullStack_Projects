@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nextoria</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Navigation Bar -->
+    <nav class="bg-blue-600 text-white p-4 sticky top-0 z-20">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#home" class="text-xl sm:text-2xl font-bold hover:underline" onclick="scrollToSection('home')">NEXTORIA</a>
+            <button class="hamburger text-white text-2xl focus:outline-none md:hidden" onclick="toggleMenu()">☰</button>
+            <ul class="nav-menu flex space-x-4 sm:space-x-6 md:flex">
+                <li><a href="#home" class="hover:underline text-sm sm:text-base" onclick="scrollToSection('home')">Home</a></li>
+                <li><a href="#assessments" class="hover:underline text-sm sm:text-base" onclick="scrollToSection('assessments')">Assessments</a></li>
+                <li><a href="#counseling" class="hover:underline text-sm sm:text-base" onclick="scrollToSection('counseling')">Counseling</a></li>
+                <li><a href="#resources" class="hover:underline text-sm sm:text-base" onclick="scrollToSection('resources')">Resources</a></li>
+                <li><a href="#contact" class="hover:underline text-sm sm:text-base" onclick="scrollToSection('contact')">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-blue-100 py-12 sm:py-20 text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4">Discover Your Perfect Career Path</h2>
+            <p class="text-base sm:text-lg text-gray-600 mb-6">Personalized career guidance and psychometric assessments to help you make informed decisions.</p>
+            <a href="#assessments" class="bg-blue-600 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg hover:bg-blue-700 text-sm sm:text-base" onclick="scrollToSection('assessments')">Take a Free Assessment</a>
+        </div>
+    </section>
+
+    <!-- Assessments Section -->
+    <section id="assessments" class="py-12 sm:py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 sm:mb-8">Psychometric Assessments</h2>
+            <p class="text-base sm:text-lg text-gray-600 mb-6">Explore your strengths, interests, and personality with our AI-driven assessments.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <div class="bg-gray-50 p-4 sm:p-6 rounded-lg shadow-md">
+                    <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-4">Interest Profiler</h3>
+                    <p class="text-sm sm:text-base text-gray-600">Identify careers that align with your passions and interests.</p>
+                </div>
+                <div class="bg-gray-50 p-4 sm:p-6 rounded-lg shadow-md">
+                    <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-4">Personality Test</h3>
+                    <p class="text-sm sm:text-base text-gray-600">Discover how your personality fits various career paths.</p>
+                </div>
+                <div class="bg-gray-50 p-4 sm:p-6 rounded-lg shadow-md">
+                    <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-4">Aptitude Assessment</h3>
+                    <p class="text-sm sm:text-base text-gray-600">Evaluate your skills to find the best career match.</p>
+                </div>
+            </div>
+            <a href="Interest_Profiler.html" class="mt-12 sm:mt-12 bg-blue-600 text-white px-4 sm:px-6 py-2 sm:py-05 rounded-lg hover:bg-blue-800 text-sm sm:text-base">Start Now</a>
+        </div>
+    </section>
+
+    <!-- Counseling Section -->
+    <section id="counseling" class="bg-gray-100 py-12 sm:py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 sm:mb-8">One-on-One Counseling</h2>
+            <p class="text-base sm:text-lg text-gray-600 mb-6">Connect with certified career counselors for personalized guidance.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-6 sm:space-y-0 sm:space-x-8">
+                <div class="bg-white p-4 sm:p-6 rounded-lg shadow-md sm:w-1/3">
+                    <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-4">Video Sessions</h3>
+                    <p class="text-sm sm:text-base text-gray-600">Book live video calls with experts for in-depth career planning.</p>
+                </div>
+                <div class="bg-white p-4 sm:p-6 rounded-lg shadow-md sm:w-1/3">
+                    <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-4">Career Workshops</h3>
+                    <p class="text-sm sm:text-base text-gray-600">Join group sessions to learn from industry professionals.</p>
+                </div>
+            </div>
+            <a href="#contact" class="mt-6 sm:mt-8 inline-block bg-blue-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-blue-700 text-sm sm:text-base" onclick="scrollToSection('contact')">Book a Session</a>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="py-12 sm:py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 sm:mb-8">Career Resources</h2>
+            <p class="text-base sm:text-lg text-gray-600 mb-6">Access free tools, blogs, and guides to explore career options.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <div class="bg-gray-50 p-4 sm:p-6 rounded-lg shadow-md">
+                    <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-4">Career Library</h3>
+                    <p class="text-sm sm:text-base text-gray-600">Explore 500+ career paths with detailed guides.</p>
+                </div>
+                <div class="bg-gray-50 p-4 sm:p-6 rounded-lg shadow-md">
+                    <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-4">Blogs & Vlogs</h3>
+                    <p class="text-sm sm:text-base text-gray-600">Read insights from career experts and industry leaders.</p>
+                </div>
+                <div class="bg-gray-50 p-4 sm:p-6 rounded-lg shadow-md">
+                    <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-4">College Finder</h3>
+                    <p class="text-sm sm:text-base text-gray-600">Find the right courses and colleges for your career goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-blue-100 py-12 sm:py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 sm:mb-8">Get in Touch</h2>
+            <p class="text-base sm:text-lg text-gray-600 mb-6">Have questions? Reach out to our team for support.</p>
+            <form class="max-w-lg mx-auto space-y-4">
+                <input type="text" placeholder="Name" class="w-full p-3 rounded-lg text-sm sm:text-base text-gray-800" required>
+                <input type="email" placeholder="Email" class="w-full p-3 rounded-lg text-sm sm:text-base text-gray-800" required>
+                <textarea placeholder="Your Message" class="w-full p-3 rounded-lg text-sm sm:text-base text-gray-800" rows="4" required></textarea>
+                <button type="submit" class="bg-blue-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-blue-700 text-sm sm:text-base">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 p-4 text-center">
+        <p class="text-sm sm:text-base text-gray-800">© 2025 Nextoria. All rights reserved.</p>
+    </footer>
+
+    <!-- Assessment Popup -->
+    <div id="assessment-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closeAssessment()">×</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-gray-800 mb-4 text-center">Quick Career Assessment</h2>
+            <div class="progress-bar">
+                <div id="progress-fill" class="progress-fill" style="width: 20%;"></div>
+            </div>
+            <!-- Assessment Slides -->
+            <div id="slide-1" class="popup-slide">
+                <p class="text-sm sm:text-base text-gray-800 mb-4">1. How much do you enjoy solving complex problems?</p>
+                <div class="flex flex-col space-y-2">
+                    <button onclick="answerQuestion(1, 5)" class="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700">Very Much</button>
+                    <button onclick="answerQuestion(1, 3)" class="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700">Somewhat</button>
+                    <button onclick="answerQuestion(1, 1)" class="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700">Not Much</button>
+                </div>
+            </div>
+            <div id="slide-2" class="popup-slide">
+                <p class="text-sm sm:text-base text-gray-800 mb-4">2. Do you prefer working with people or independently?</p>
+                <div class="flex flex-col space-y-2">
+                    <button onclick="answerQuestion(2, 5)" class="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700">With People</button>
+                    <button onclick="answerQuestion(2, 3)" class="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700">Mix of Both</button>
+                    <button onclick="answerQuestion(2, 1)" class="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700">Independently</button>
+                </div>
+            </div>
+            <div id="slide-3" class="popup-slide">
+                <p class="text-sm sm:text-base text-gray-800 mb-4">3. How important is creativity in your work?</p>
+                <div class="flex flex-col space-y-2">
+                    <button onclick="answerQuestion(3, 5)" class="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700">Very Important</button>
+                    <button onclick="answerQuestion(3, 3)" class="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700">Somewhat Important</button>
+                    <button onclick="answerQuestion(3, 1)" class="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700">Not Important</button>
+                </div>
+            </div>
+            <div id="slide-4" class="popup-slide">
+                <p class="text-sm sm:text-base text-gray-800 mb-4">4. Do you enjoy leading or managing others?</p>
+                <div class="flex flex-col space-y-2">
+                    <button onclick="answerQuestion(4, 5)" class="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700">Yes, I Love It</button>
+                    <button onclick="answerQuestion(4, 3)" class="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700">Sometimes</button>
+                    <button onclick="answerQuestion(4, 1)" class="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700">Not Really</button>
+                </div>
+            </div>
+            <div id="slide-5" class="popup-slide">
+                <p class="text-sm sm:text-base text-gray-800 mb-4">5. How comfortable are you with technology?</p>
+                <div class="flex flex-col space-y-2">
+                    <button onclick="answerQuestion(5, 5)" class="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700">Very Comfortable</button>
+                    <button onclick="answerQuestion(5, 3)" class="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700">Moderately Comfortable</button>
+                    <button onclick="answerQuestion(5, 1)" class="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700">Not Comfortable</button>
+                </div>
+            </div>
+            <div id="result-slide" class="popup-slide">
+                <p class="text-sm sm:text-base text-gray-800 mb-4">Your Career Interest Profile:</p>
+                <p id="result-text" class="text-sm sm:text-base text-gray-800"></p>
+                <button onclick="closeAssessment()" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Close</button>
+            </div>
+            <div class="flex justify-between mt-4">
+                <button id="prev-btn" onclick="prevSlide()" class="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 hidden">Previous</button>
+                <button id="next-btn" onclick="nextSlide()" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

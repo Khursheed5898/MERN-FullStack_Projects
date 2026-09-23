@@ -1,0 +1,11 @@
+/* Main Entry Point for Styles */
+@import "./styles/Global.css";
+
+/* 
+   Modular page styles are imported within their respective components, 
+   but Global.css handles the shared design system.
+*/
+
+:root {
+  color-scheme: dark;
+}
