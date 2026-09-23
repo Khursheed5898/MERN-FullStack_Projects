@@ -52,6 +52,6 @@ To run any project locally:
 ---
 
 ## 👤 Author
-- **Developer:** Khursheed Alam
+- **Developer:** [@Khursheed Alam](https://khursheed4k.vercel.app)
 - **GitHub:** [@Khursheed5898](https://github.com/Khursheed5898)
 - **LinkedIn:** [Khursheed Alam](https://www.linkedin.com/in/khursheed-alam-51a76121b)
