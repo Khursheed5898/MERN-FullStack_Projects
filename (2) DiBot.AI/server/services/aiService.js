@@ -19,14 +19,12 @@ const getGroqClient = () => {
   return new Groq({ apiKey });
 };
 
-const getModelName = () => process.env.GROQ_MODEL || "llama-3.3-70b-versatile";
+const getModelName = () => process.env.GROQ_MODEL || "openai/gpt-oss-120b";
 
 const FALLBACK_MODELS = [
-  process.env.GROQ_MODEL || "llama-3.3-70b-versatile",
-  "llama3-70b-8192",
-  "llama3-8b-8192",
-  "mixtral-8x7b-32768",
-  "gemma2-9b-it",
+  process.env.GROQ_MODEL || "openai/gpt-oss-120b",
+  "openai/gpt-oss-20b",
+  "qwen/qwen3.8-27b",
 ];
 
 async function createCompletionWithFallback(params) {

@@ -12,5 +12,7 @@ services:
         sync: false # User must enter their MongoDB URI on connection
       - key: GROQ_API_KEY
         sync: false # User must enter their API Key on connection
+      - key: GROQ_MODEL
+        value: openai/gpt-oss-120b
       - key: JWT_SECRET
         generateValue: true # Automatically generate a secure random string

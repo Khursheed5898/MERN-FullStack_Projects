@@ -1,4 +1,11 @@
-import mongoose from 'mongoose'
+import mongoose from 'mongoose';
+import dns from 'dns';
+
+try {
+  dns.setServers(['8.8.8.8', '1.1.1.1']);
+} catch {
+  // Ignore
+}
 
 // Disable buffering so that database errors are thrown immediately
 // mongoose.set('bufferCommands', false);
