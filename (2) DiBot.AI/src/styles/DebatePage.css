@@ -69,7 +69,7 @@
 /* Layout */
 .debate-layout {
   display: flex;
-  height: calc(100vh - 70px); /* Header height only */
+  height: calc(100vh - 58px); /* Header height only */
   overflow: hidden;
   position: relative;
 }

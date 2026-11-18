@@ -325,7 +325,7 @@ header {
   top: 0;
   z-index: 1000;
   overflow: visible !important;
-  min-height: 70px !important;
+  min-height: 58px !important;
   display: flex !important;
   align-items: center !important;
   box-sizing: border-box !important;
@@ -352,8 +352,8 @@ header::before {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.85rem 0 !important;
-  min-height: 70px !important;
+  padding: 0.45rem 0 !important;
+  min-height: 58px !important;
   box-sizing: border-box !important;
 }
 
@@ -1326,7 +1326,7 @@ footer::before {
 @media (min-width: 1024px) {
   header {
     overflow: visible !important;
-    min-height: 70px !important;
+    min-height: 58px !important;
   }
 
   .drawer-header,
@@ -1344,8 +1344,8 @@ footer::before {
     position: relative !important;
     width: 100% !important;
     overflow: visible !important;
-    min-height: 70px !important;
-    padding: 0.85rem 0 !important;
+    min-height: 58px !important;
+    padding: 0.45rem 0 !important;
     box-sizing: border-box !important;
   }
 
